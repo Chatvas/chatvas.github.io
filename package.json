@@ -2,7 +2,7 @@
     "name": "front-end",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://chatvas.github.io/",
+    "homepage": "https://chatvas.github.io/front-end",
     "dependencies": {
 	"gh-pages": "^2.1.1",
 	"react": "^16.12.0",
