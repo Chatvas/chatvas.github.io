@@ -1,67 +1,66 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>Chatvas Chat Room</title>
-</head>
-<body>
-    <!--  main container,set to center  -->
-    <div class="content">
-        <!--  main class contains chat message -->
-        <div class="main">
-            <p style="height: 15px;"></p>
-        </div>
-        <form id="message-form">
-            <input id="message" rows='4' cols='30' value=""  autocomplete="off" placeholder="Type in some text:"></input>  
-            <button>Send</button>
-        </form>
-    </div>
+    <head>
+	<meta charset="utf-8">
+	<title>Chatvas Chat Room</title>
+	<script src="./index.js"></script>
+    </head>
+    <body>
+	<!--  main container,set to center  -->
+	<div class="content">
+            <!--  main class contains chat message -->
+            <main>
+		<p style="height: 15px;"></p>
+            </main>
+            <form id="message-form">
+		<input type="text" id="message" rows='4' cols='30' value=""  autocomplete="off" placeholder="Write a message..."/>
+		<button onclick="sendMessage()">Send</button>
+            </form>
+	</div>
 
-        <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
-        <script src="/index.js"></script>
-<style type="text/css">
-*{
-    padding: 0;
-    margin: 0 
-}
-.main{
-    width: 800px;
-    height: 400px;
-    margin: 20px auto;
-    overflow: auto;
-    border: 1px solid gray;
-    background: #eee;
-}
+	<style type="text/css">
+	 *{
+	     padding: 0;
+	     margin: 0 
+	 }
+	 main{
+	     width: 800px;
+	     height: 400px;
+	     margin: 20px auto;
+	     overflow: scroll;
+	     border: 1px solid gray;
+	     background: #eee;
+	 }
 
-.content{
-    width: 800px;
-    height: 600px;
-    /*border: 1px solid red;*/
-    margin: 0 auto;
-}
+	 .content{
+	     width: 800px;
+	     height: 600px;
+	     /*border: 1px solid red;*/
+	     margin: 0 auto;
+	 }
 
-#message-form{
-    float: right;
-}
+	 #message-form{
+	     float: right;
+	 }
 
-.p1{    
-    margin-right: 10px;
-    line-height: 40px;
-    display: block;
-    float: right;
-    text-align: right;
-    border-radius: 2px;
-    background: #b2e281;
-}
-.p2{
-    margin-left: 10px;
-    line-height: 40px;
-    display: block;
-    float: left;
-    text-align: left;
-    border-radius: 2px;
-    background: white;
-}
-</style>
-</body>
+	 .p1{    
+	     margin-right: 10px;
+	     line-height: 40px;
+	     display: block;
+	     float: right;
+	     text-align: right;
+	     border-radius: 2px;
+	     background: #b2e281;
+	 }
+	 .p2{
+	     margin-left: 10px;
+	     line-height: 40px;
+	     display: block;
+	     float: left;
+	     text-align: left;
+	     border-radius: 2px;
+	     background: white;
+	 }
+	</style>
+    </body>
 </html>

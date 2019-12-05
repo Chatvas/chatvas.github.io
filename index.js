@@ -1,22 +1,32 @@
-var socket=io.connect('http://127.0.0.1:3000');
-var message=document.getElementById('message');
+const uri = 'ws://35.196.185.160:3080/';
+let s = new WebSocket(uri);
 
-$('button').click(()=>{
+function appendMessage(text, me) {
+    document.querySelector('main').innerHTML += `<p class='message-${me? 'sent':'received'}'>${text}</p>`;
+}
 
-    if($("#message")[0].value==null || $("#message")[0].value==''){
-        console.log('Please type in some text!');
+s.onmessage = m => {
+    // this function runs when a message is received from the server
+    // it is called by the WebSocket object automatically
+    appendMessage(m.data);
+    console.log(`receieved ${m} from server`);
+};
+
+function sendMessage() {
+    alert('sending message');
+    inputBox = document.getElementById('message');
+    let message = inputBox.value;
+    if(!message) {
+        alert('Please type in some text!');
     }else{
-        socket.emit('message',{text:message.value});
-        //console.log(message.value);
-        $('.main').append('<p class="p1">'+' '+' '+message.value+' '+' '+'</p>'+'<br/>'+'<br/>'+'<p style="height: 16px;">'+'</p>');
-        
+	// send the message to the server
+	s.send(message);
+
+	// display the message on-screen
+	appendMessage(message, true);
+	
         // After hitting send, empty all text
-        $("#message")[0].value='';
-        return false;
+	inputBox.value='';
     }
     
-});
-socket.on('push message',(data)=>{
-    console.log(data.text);
-    $('.main').append('<p class="p2">'+' '+' '+data.text+' '+' '+'</p>'+'<br/>'+'<br/>'+'<p style="height: 16px;">'+'</p>');
-});
+}
