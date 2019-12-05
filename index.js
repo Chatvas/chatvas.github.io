@@ -1,3 +1,4 @@
+// business logic
 const uri = 'ws://35.196.185.160:3080/';
 let s = new WebSocket(uri);
 
@@ -26,7 +27,8 @@ function sendMessage() {
 	appendMessage(message, true);
 	
         // After hitting send, empty all text
-	inputBox.value='';
     }
     
 }
+
+

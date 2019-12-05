@@ -7,14 +7,14 @@
     </head>
     <body>
 	<!--  main container,set to center  -->
-	<div class="content">
+	<div id="content">
             <!--  main class contains chat message -->
-            <main>
+	    <main>
 		<p style="height: 15px;"></p>
             </main>
-            <form id="message-form">
+            <form id="message-form" onsubmit="sendMessage()">
 		<input type="text" id="message" rows='4' cols='30' value=""  autocomplete="off" placeholder="Write a message..."/>
-		<button onclick="sendMessage()">Send</button>
+		<input type="submit" value="Send"/>
             </form>
 	</div>
 
@@ -43,7 +43,7 @@
 	     float: right;
 	 }
 
-	 .p1{    
+	 .message-sent{    
 	     margin-right: 10px;
 	     line-height: 40px;
 	     display: block;
@@ -52,7 +52,7 @@
 	     border-radius: 2px;
 	     background: #b2e281;
 	 }
-	 .p2{
+	 .message-received{
 	     margin-left: 10px;
 	     line-height: 40px;
 	     display: block;
