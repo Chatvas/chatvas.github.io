@@ -1,0 +1,44 @@
+* {
+	  padding: 0;
+	  margin: 0 
+}
+
+main {
+	  width: 800px;
+	  height: 400px;
+	  margin: 20px auto;
+	  overflow: scroll;
+	  border: 1px solid gray;
+	  background: #eee;
+}
+
+.content {
+	  width: 800px;
+	  height: 600px;
+	  /*border: 1px solid red;*/
+	  margin: 0 auto;
+}
+
+#message-form {
+	  float: right;
+}
+
+.message-sent {
+	  margin-right: 10px;
+	  line-height: 40px;
+	  display: block;
+	  float: right;
+	  text-align: right;
+	  border-radius: 2px;
+	  background: #b2e281;
+}
+
+.message-received {
+	  margin-left: 10px;
+	  line-height: 40px;
+	  display: block;
+	  float: left;
+	  text-align: left;
+	  border-radius: 2px;
+	  background: white;
+}

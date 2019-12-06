@@ -1,66 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-	<meta charset="utf-8">
-	<title>Chatvas Chat Room</title>
-	<script src="./index.js"></script>
+				<meta charset="utf-8">
+				<title>Chatvas Chat Room</title>
+				<script src="./index.js"></script>
     </head>
     <body>
-	<!--  main container,set to center  -->
-	<div id="content">
+				<!--  main container,set to center  -->
+				<div id="content">
             <!--  main class contains chat message -->
-	    <main>
-		<p style="height: 15px;"></p>
-      </main>
-			<div id="message-form">
-		<input type="text" id="message" rows='4' cols='30' value=""  autocomplete="off" placeholder="Write a message..."/>
-		<button onclick="sendMessage()">Send</button>
-			</div>
-	</div>
+						<main>
+								<p style="height: 15px;"></p>
+						</main>
+						<div id="message-form">
+								<input type="text" id="message" rows='4' cols='30' value=""  autocomplete="off" placeholder="Write a message..."/>
+								<button onclick="sendMessage()">Send</button>
+						</div>
+				</div>
 
-	<style type="text/css">
-	 *{
-	     padding: 0;
-	     margin: 0 
-	 }
-	 main{
-	     width: 800px;
-	     height: 400px;
-	     margin: 20px auto;
-	     overflow: scroll;
-	     border: 1px solid gray;
-	     background: #eee;
-	 }
-
-	 .content{
-	     width: 800px;
-	     height: 600px;
-	     /*border: 1px solid red;*/
-	     margin: 0 auto;
-	 }
-
-	 #message-form{
-	     float: right;
-	 }
-
-	 .message-sent{    
-	     margin-right: 10px;
-	     line-height: 40px;
-	     display: block;
-	     float: right;
-	     text-align: right;
-	     border-radius: 2px;
-	     background: #b2e281;
-	 }
-	 .message-received{
-	     margin-left: 10px;
-	     line-height: 40px;
-	     display: block;
-	     float: left;
-	     text-align: left;
-	     border-radius: 2px;
-	     background: white;
-	 }
-	</style>
     </body>
 </html>
