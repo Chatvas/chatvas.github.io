@@ -11,11 +11,11 @@
             <!--  main class contains chat message -->
 	    <main>
 		<p style="height: 15px;"></p>
-            </main>
-            <form id="message-form" onsubmit="sendMessage()">
+      </main>
+			<div id="message-form">
 		<input type="text" id="message" rows='4' cols='30' value=""  autocomplete="off" placeholder="Write a message..."/>
-		<input type="submit" value="Send"/>
-            </form>
+		<button onclick="sendMessage()">Send</button>
+			</div>
 	</div>
 
 	<style type="text/css">

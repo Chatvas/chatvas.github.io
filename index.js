@@ -14,19 +14,20 @@ s.onmessage = m => {
 };
 
 function sendMessage() {
-    alert('sending message');
+    console.log('sending message');
     inputBox = document.getElementById('message');
     let message = inputBox.value;
     if(!message) {
         alert('Please type in some text!');
     }else{
-	// send the message to the server
-	s.send(message);
+				// send the message to the server
+				s.send(message);
 
-	// display the message on-screen
-	appendMessage(message, true);
-	
+				// display the message on-screen
+				appendMessage(message, true);
+				
         // After hitting send, empty all text
+				inputBox.value = '';
     }
     
 }
